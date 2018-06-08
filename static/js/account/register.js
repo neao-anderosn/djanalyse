@@ -9,7 +9,7 @@
                     rangelength: [4, 20],
                     remote: {
                         type: "POST",
-                        url: "/account/is_name_exists",
+                        url: "/account/is_name_not_exists",
                         data: {
                             username: function () {
                                 return $("#username").val();
