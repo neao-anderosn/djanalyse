@@ -129,3 +129,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [(
     os.path.join(BASE_DIR, 'static')
 )]
+
+# SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+# SESSION_FILE_PATH = '/Users/pengbin/Downloads/session_file_temp'

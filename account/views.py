@@ -19,6 +19,7 @@ def account_login(request):
             login(request, user)
             # if not request.POST.get('remember_me', None):
             #     request.session.set_expiry(0)
+            request.session['theme'] = '我喜欢白色的主题'
             return redirect("/account/profile")
         else:
             return render(request, "login.html", {'errorMsg': '登录失败，用户名或者密码错误'})
@@ -28,7 +29,8 @@ def account_profile(request):
     """
     用户信息
     """
-    return render(request, "profile.html")
+    theme = request.session['theme']
+    return render(request, "profile.html", {'theme': theme})
 
 
 @csrf_exempt
